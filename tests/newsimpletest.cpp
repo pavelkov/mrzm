@@ -7,12 +7,32 @@
 
 #include <stdlib.h>
 #include <iostream>
+#include <list>
 
+#include "boost/lambda/lambda.hpp"
 #include "MergeContainer.h"
 
 void test() {
+    using namespace boost::lambda;
+    using namespace std;
+    
+    list<int> l1(10);
+    list<int> l2(8);
+    
+    {
+        int acc = 0;
+        for_each(l1.begin(), l1.end(), _1 = ++++var(acc));
+        for_each(l1.begin(), l1.end(), std::cout << _1 << " ");
+    }
+    std::cout << std::endl;
+    {
+        int acc = 1;
+        for_each(l2.begin(), l2.end(), _1 = ++++var(acc));
+        for_each(l2.begin(), l2.end(), std::cout << _1 << " ");        
+    }
+    
+    
     std::cout << "newsimpletest test 2" << std::endl;
-    std::cout << "%TEST_FAILED% time=0 testname=test2 (newsimpletest) message=error message sample" << std::endl;
 }
 
 int main(int argc, char** argv) {

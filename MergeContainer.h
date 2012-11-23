@@ -13,16 +13,16 @@
 template <class ForwardIterator> class MergeContainer {
 public:
     // types
-    typedef ForwardIterator::value_type value_type;
-    typedef ForwardIterator:: size_type size_type;
-    typedef ForwardIterator::difference_type difference_type;
-    typedef ForwardIterator::allocator_type allocator_type;
-    typedef ForwardIterator::value_compare value_compare;
+    typedef typename ForwardIterator::value_type value_type;
+    typedef typename ForwardIterator:: size_type size_type;
+    typedef typename ForwardIterator::difference_type difference_type;
+    typedef typename ForwardIterator::allocator_type allocator_type;
+    typedef typename ForwardIterator::value_compare value_compare;
 
-    typedef ForwardIterator::reference reference;
-    typedef ForwardIterator::const_reference const_reference;
-    typedef ForwardIterator::pointer pointer;
-    typedef ForwardIterator::const_pointer const_pointer;
+    typedef typename ForwardIterator::reference reference;
+    typedef typename ForwardIterator::const_reference const_reference;
+    typedef typename ForwardIterator::pointer pointer;
+    typedef typename ForwardIterator::const_pointer const_pointer;
 private:
 
 };
