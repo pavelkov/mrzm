@@ -17,7 +17,6 @@ public:
     typedef typename ForwardIterator:: size_type size_type;
     typedef typename ForwardIterator::difference_type difference_type;
     typedef typename ForwardIterator::allocator_type allocator_type;
-
     typedef typename ForwardIterator::reference reference;
     typedef typename ForwardIterator::const_reference const_reference;
     typedef typename ForwardIterator::pointer pointer;
