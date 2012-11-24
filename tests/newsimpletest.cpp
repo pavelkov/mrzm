@@ -18,6 +18,7 @@ void test() {
     
     list<int> l1(10);
     list<int> l2(8);
+    MergeContainer<list<int> > merge;
     
     {
         int acc = 0;
